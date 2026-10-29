@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>달리Go 개인정보 처리방침</title>
+<style>
+:root{color-scheme:light dark;--bg:#fafaf7;--ink:#1b1b1b;--ink2:#5f5f5f;--card:#fff;--line:#e4e4de;--accent:#1a8f40}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--ink:#eee;--ink2:#a0a0a0;--card:#1d1d1d;--line:#333;--accent:#30d158}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+main{max-width:720px;margin:0 auto;padding:32px 16px 80px}
+h1{font-size:26px;margin:0 0 4px}
+h2{font-size:18px;margin:36px 0 8px;padding-top:8px;border-top:1px solid var(--line)}
+.meta{color:var(--ink2);font-size:14px}
+ul{padding-left:20px;margin:8px 0}li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);border:1px solid var(--line)}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:rgba(127,127,127,.1)}
+.wrap{overflow-x:auto}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0}
+a{color:var(--accent)}
+nav{margin-top:12px;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>달리Go 개인정보 처리방침</h1>
+<div class="meta">시행일 2026-10-29 · 운영자 tamgulife · 문의 <a href="mailto:chanhe0174@gmail.com">chanhe0174@gmail.com</a></div>
+<nav><a href="terms.html">이용약관</a> · <a href="#account-deletion">계정 삭제 방법</a></nav>
+
+<p>tamgulife(이하 "운영자")는 러닝 기록 앱 「달리Go」(안드로이드 패키지 com.tamgulife.dalligo, 이하 "앱")에서 이용자의 개인정보를 아래와 같이 다룹니다. 앱은 친구끼리 크루를 만들어 러닝 기록과 순위를 나누는 서비스이며, 광고·행동 추적·분석 도구를 쓰지 않습니다.</p>
+
+<h2>1. 핵심 요약</h2>
+<ul>
+<li>러닝 중 받은 <b>원본 GPS 좌표는 이용자의 기기에만 저장</b>되고 서버로 보내지 않습니다.</li>
+<li>크루원에게 보이는 코스는 <b>출발·도착 지점 반경 300m 안의 점을 지우고, 점을 5m 간격으로 솎고, 시각 정보를 뺀 경로</b>입니다.</li>
+<li>실시간 상태·홈·순위 화면에는 <b>위치 정보가 없습니다</b>.</li>
+<li>이메일 주소와 프로필 사진은 저장하지 않습니다.</li>
+<li>앱 안에서 언제든 <b>계정을 삭제</b>할 수 있습니다.</li>
+</ul>
+
+<h2>2. 수집하는 항목과 목적</h2>
+<div class="wrap"><table>
+<tr><th>항목</th><th>내용</th><th>목적</th></tr>
+<tr><td>로그인 식별자</td><td>Google 로그인으로 받은 계정 고유번호(sub). 서버에는 "google:" 를 붙여 저장합니다. Google 이 주는 ID 토큰에는 이메일·사진 정보가 들어 있을 수 있지만 서버는 검증에만 쓰고 저장하지 않습니다.</td><td>계정 식별, 로그인</td></tr>
+<tr><td>닉네임</td><td>최대 20자. 첫 로그인 때 Google 계정 이름이 초기 닉네임으로 들어가며, 프로필에서 바꿀 수 있습니다. 같은 크루의 사람에게 보입니다.</td><td>크루원 표시</td></tr>
+<tr><td>크루 정보</td><td>크루 이름, 초대 코드, 가입 시각, 순위 기준 설정, 이용자의 크루 소속 여부</td><td>크루 기능, 순위</td></tr>
+<tr><td>러닝 기록</td><td>러닝이 끝나면 시작·종료 시각, 거리, 운동 시간, 휴식 시간·횟수, 평균 페이스, 1km 구간 기록, 휴식 구간, GPS 보정 여부, 비정상 기록 표시(너무 빠름·걷기)를 보냅니다.</td><td>기록 보관, 크루 순위·공유, 비정상 기록 제외</td></tr>
+<tr><td>마스킹된 코스</td><td>아래 3항의 처리를 거친 위도·경도 목록(시각 없음). 처리 결과가 비면 보내지 않습니다.</td><td>크루원에게 코스 지도 표시</td></tr>
+<tr><td>실시간 러닝 상태</td><td>러닝 중에만 상태(달리는 중·휴식), 거리, 운동 시간, 페이스, 시작 시각을 30초마다 보냅니다. 위치는 없습니다.</td><td>크루 홈의 "지금 달리는 중" 표시</td></tr>
+<tr><td>세션 정보</td><td>로그인 세션 토큰(서버에는 sha256 해시만 저장), 생성 시각, 홈 화면을 마지막으로 조회한 시각</td><td>로그인 유지, "보는 중" 표시</td></tr>
+<tr><td>서버 요청 기록</td><td>요청 방식·경로·응답 코드·소요 시간 한 줄. 로그인 토큰과 요청 본문은 남기지 않습니다. 호스팅 인프라가 보안·운영을 위해 접속 기록(IP 등)을 따로 남길 수 있습니다.</td><td>장애 대응, 보안</td></tr>
+</table></div>
+
+<h2>3. 위치 정보는 이렇게 다룹니다</h2>
+<ul>
+<li><b>권한</b>: 정확한 위치(ACCESS_FINE_LOCATION)를 러닝을 시작할 때 요청합니다. 러닝 중 화면이 꺼져도 기록이 이어지도록 앱은 "위치" 유형의 포그라운드 서비스를 쓰며, 이때 상단에 러닝 중 알림이 계속 표시됩니다. 러닝을 끝내면 서비스와 위치 수신이 멈춥니다. <b>백그라운드 위치 권한(앱이 꺼진 뒤 위치 수집)은 쓰지 않습니다.</b></li>
+<li><b>기기에 저장</b>: 원본 GPS 점은 앱 전용 저장소에 파일로 저장됩니다. 앱 데이터 백업(allowBackup)은 꺼져 있습니다.</li>
+<li><b>서버로 보내는 코스</b>: ① 출발점·도착점에서 반경 300m 안의 점을 모두 지웁니다 ② 남은 점을 5m 이상 떨어진 점만 남기도록 솎습니다(점이 너무 많으면 간격을 넓힙니다) ③ 각 점의 시각은 붙이지 않습니다. 양 끝 300m가 겹치는 짧은 러닝은 코스를 보내지 않습니다.</li>
+<li><b>누가 보나</b>: 같은 크루에 속한 이용자만 마스킹된 코스를 볼 수 있습니다. 본인의 원본 코스는 본인 기기에서만 보입니다.</li>
+<li>로그인한 상태에서 러닝이 끝나면 위 기록과 마스킹된 코스는 자동으로 업로드됩니다. 업로드를 원하지 않으면 기록을 삭제하거나 계정을 삭제하세요.</li>
+<li><b>지도 타일</b>: 코스 지도는 OpenStreetMap 의 지도 이미지를 내려받아 그립니다. 이때 이용자 기기의 IP 주소와 보고 있는 지도 영역(타일 번호)이 OpenStreetMap 서버에 전달됩니다. 운영자는 이 정보를 받지 않습니다.</li>
+</ul>
+
+<h2>4. 기기에만 남는 정보</h2>
+<ul>
+<li>원본 GPS 점과 러닝 기록 파일, 진행 중 러닝의 복구용 임시 저장본</li>
+<li>목표 페이스 등 앱 설정, 로그인 토큰(앱 전용 저장소)</li>
+</ul>
+<p>로그아웃하거나 계정을 삭제해도 이 기기에 저장된 러닝 기록은 남습니다. 지우려면 기록 상세에서 삭제하거나 앱 데이터를 지우세요.</p>
+
+<h2>5. 보관 기간과 삭제</h2>
+<ul>
+<li>서버 정보는 <b>이용자가 삭제하기 전까지</b> 보관합니다. 별도의 자동 만료는 없습니다.</li>
+<li><b>기록 삭제</b>: 기록 상세에서 삭제하면 그 기록과 코스가 서버에서 즉시 지워지고 순위에서도 빠집니다.</li>
+<li><b>크루 나가기</b>: 크루 화면에서 나갈 수 있습니다. 크루장이 나가면 가장 먼저 가입한 다른 멤버가 크루장이 되고, 남은 멤버가 없으면 크루가 삭제됩니다.</li>
+<li><b>계정 삭제</b>: 서버의 이용자 정보, 로그인 세션, 크루 소속, 러닝 기록, 코스, 실시간 상태가 즉시 지워집니다. 되돌릴 수 없습니다. 운영자는 장애 대비로 서버 데이터베이스를 하루 1회 백업하며 백업 파일은 7일 뒤 지워지므로, <b>삭제한 정보가 백업에는 최대 7일 더 남을 수 있습니다</b>.</li>
+<li>실시간 상태는 러닝이 끝나면 지웁니다. 앱이 비정상 종료되면 마지막 값이 다음 러닝이나 계정 삭제 때까지 남을 수 있으나, 90초 넘게 갱신되지 않은 상태는 크루 화면에 표시되지 않습니다.</li>
+</ul>
+
+<h2 id="account-deletion">6. 계정 삭제 방법</h2>
+<div class="box">
+<b>앱에서</b><br>
+앱 실행 → 좌측 상단 아바타(프로필) → <b>계정 삭제</b> → 안내를 확인하고 "계속" → "영구 삭제".<br><br>
+<b>앱에 접속할 수 없을 때</b><br>
+<a href="mailto:chanhe0174@gmail.com">chanhe0174@gmail.com</a> 로 삭제를 요청해 주세요. 본인 확인을 위해 앱 닉네임, 크루 이름, 가장 최근 러닝 날짜를 알려 주시면 확인 후 서버 정보를 삭제하고 회신합니다. 운영자는 이메일 주소를 저장하지 않으므로 이 정보로 계정을 찾습니다.<br><br>
+<b>일부만 삭제</b><br>
+개별 러닝 기록은 기록 상세의 삭제 메뉴에서, 크루 소속은 크루 화면의 "그룹 나가기"에서 지울 수 있습니다.
+</div>
+
+<h2>7. 제3자 제공·위탁·추적</h2>
+<ul>
+<li>개인정보를 판매하거나 제3자에게 제공하지 않으며, 광고 SDK·행동 추적·분석·비정상 종료 수집 도구를 사용하지 않습니다.</li>
+<li><b>Google</b>: 로그인에 Google 계정 선택과 ID 토큰 발급을 이용합니다. 서버는 토큰 검증을 위해 Google 의 공개 키를 내려받으며 이용자 정보를 보내지 않습니다.</li>
+<li><b>OpenStreetMap</b>: 3항의 지도 타일.</li>
+<li><b>서버 호스팅</b>: AWS Lightsail(서울 리전)의 서버에 저장합니다.</li>
+<li>법령에 따라 수사기관 등의 적법한 요청이 있으면 그 범위에서 제공할 수 있습니다.</li>
+</ul>
+
+<h2>8. 안전성 확보 조치</h2>
+<ul>
+<li>앱과 서버의 모든 통신은 HTTPS 입니다(평문 통신 차단).</li>
+<li>로그인 세션 토큰은 서버에 해시값만 저장합니다.</li>
+<li>서버 접근 권한은 운영자로 제한합니다.</li>
+</ul>
+
+<h2>9. 이용자의 권리</h2>
+<p>이용자는 앱에서 본인의 기록과 닉네임을 보고, 닉네임을 고치고, 기록·크루 소속·계정을 삭제할 수 있습니다. 그 밖의 열람·정정·삭제·처리정지 요청은 <a href="mailto:chanhe0174@gmail.com">chanhe0174@gmail.com</a> 로 보내 주세요.</p>
+
+<h2>10. 아동</h2>
+<p>앱은 만 14세 미만을 대상으로 하지 않으며 만 14세 미만 아동의 개인정보를 알고서 수집하지 않습니다.</p>
+
+<h2>11. 개인정보 보호 책임자와 문의</h2>
+<p>운영자 tamgulife · 이메일 <a href="mailto:chanhe0174@gmail.com">chanhe0174@gmail.com</a></p>
+
+<h2>12. 방침 변경</h2>
+<p>내용이 바뀌면 시행일과 함께 이 페이지를 고치고, 중요한 변경은 앱 업데이트 안내로 알립니다.</p>
+</main>
+</body>
+</html>
